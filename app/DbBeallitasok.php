@@ -10,12 +10,12 @@ class DbBeallitasok implements IDbBeallitasok
 
     public function getSzerver()
     {
-        return "";
+        return "localhost";
     }
 
     public function getFelhasznaloNev()
     {
-        return "";
+        return "root";
     }
 
     public function getJelszo()
@@ -25,6 +25,6 @@ class DbBeallitasok implements IDbBeallitasok
 
     public function getAdatbazis()
     {
-        return "";
+        return "portaltech";
     }
 }
