@@ -1,0 +1,35 @@
+#wrapper {
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+
+}
+
+#header {
+    width: 1000px;
+    height: 150px;
+}
+
+#kosar {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+#webshop {
+    float: left;
+    width: 600px;
+    height: 100%;
+}
+
+#belepes {
+    float: left;
+    width: 200px;
+    height: 100%;
+}
+
+#footer {
+    clear: both;
+    width: 1000px;
+    height: 150px;
+}

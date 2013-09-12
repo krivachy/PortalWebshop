@@ -4,6 +4,7 @@
  * Date: 2013.09.11.
  * Time: 11:44
  */
+include_once "IDbBeallitasok.php";
 
 class DbBeallitasok implements IDbBeallitasok
 {
