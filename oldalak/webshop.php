@@ -34,7 +34,7 @@ if(isset($_POST['fizetes'])){
     foreach($termekek as $termek) {
         print "<div id='termek'>";
         print "<h3>".$termek->nev."</h3>";
-        print "<p>".$termek->leiras.$termek->id."</p>";
+        print "<p>".$termek->leiras."</p>";
         print "<span>".$termek->ar." Ft</span>";
         if(App::Authentikalva()) {?>
             <form action="index.php?p=webshop" method="POST">
