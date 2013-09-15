@@ -22,7 +22,7 @@ if (App::Authentikalva()) {
         }
         print "</div>";
         print "<p>Összesen: ".$ossz." Ft</p>";
-        print '<form action="index.php?p=webshop method="POST"><input type="hidden" name="fizetes" value="true"><input type="submit" value="Fizetés"></form>';
+        print '<form action="index.php?p=webshop" method="POST"><input type="hidden" name="fizetes" value="true"><input type="submit" value="Fizetés"></form>';
     }
 } else {
     print "<p>Csak belépett felhasználók számára látható.</p>";
