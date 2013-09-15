@@ -24,7 +24,7 @@ class FelhasznaloModel
      */
     public $admin;
 
-    function __construct(int $f_id, string $f_nev, string $nev, boolean $admin)
+    function __construct($f_id, $f_nev, $nev, $admin)
     {
         $this->admin = $admin;
         $this->f_id = $f_id;

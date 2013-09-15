@@ -5,17 +5,29 @@
  * Time: 0:14
  */
 include_once "dao/KosarDao.php";
+include_once "dao/FelhasznaloDao.php";
+include_once "dao/TermekDao.php";
 include_once "app/DbKapcsolat.php";
 include_once "app/DbBeallitasok.php";
+include_once "model/FelhasznaloModel.php";
 
 class App
 {
 
+    /**
+     * @var DbKapcsolat
+     */
     private static $kapcsolat = null;
 
+    /**
+     * @return DbKapcsolat
+     */
     static private function Kapcsolat()
     {
-        if (App::$kapcsolat == null) new DbKapcsolat(new DbBeallitasok());
+        if (App::$kapcsolat == null){
+            App::$kapcsolat = new DbKapcsolat(new DbBeallitasok());
+        }
+
         return App::$kapcsolat;
     }
 
@@ -24,7 +36,8 @@ class App
      */
     static function KosarDao()
     {
-        return new KosarDao(FelhasznaloId(), App::Kapcsolat());
+        $id = App::Felhasznalo()->f_id;
+        return new KosarDao($id, App::Kapcsolat());
     }
 
     /**
@@ -35,29 +48,36 @@ class App
         return new FelhasznaloDao(App::Kapcsolat());
     }
 
+    static function TermekDao()
+    {
+        return new TermekDao(App::Kapcsolat());
+    }
+
+    /**
+     * @return bool
+     */
     static function Authentikalva()
     {
-        return isset($_COOKIE['user_id']);
+        //print($_SESSION['felhasznalo']);
+        return !empty($_SESSION['felhasznalo']);
     }
 
-    static function setFelhasznaloNev(string $nev)
+    /**
+     * @return FelhasznaloModel
+     */
+    static function Felhasznalo()
     {
-        setcookie('neve', $nev);
+        return $_SESSION['felhasznalo'];
     }
 
-    static function FelhasznaloNev()
-    {
-        return $_COOKIE['neve'];
+    static function FelhasznaloKilepes(){
+        unset($_SESSION['felhasznalo']);
+        session_destroy();
     }
 
-    static function setFelhasznaloId(integer $id)
+    public static function FelhasznaloBelepes(FelhasznaloModel $felhasznalo)
     {
-        setcookie('user_id', $id);
-    }
-
-    static function FelhasznaloId()
-    {
-        return $_COOKIE['user_id'];
+        $_SESSION['felhasznalo'] = $felhasznalo;
     }
 
 }

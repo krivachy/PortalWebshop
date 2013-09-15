@@ -32,6 +32,7 @@ class DbKapcsolat
         if ($this->kapcsolat->connect_errno) {
             die("Nem sikerült kapcsolódni a MYSQL szerverhez: (" . $this->kapcsolat->connect_errno . ") " . $this->kapcsolat->connect_error);
         }
+        $this->kapcsolat->set_charset('utf8');
     }
 
     /**
@@ -57,19 +58,10 @@ class DbKapcsolat
      * @param string $lekerdezes
      * @return bool|mysqli_result
      */
-    function egyLekeresVegrehajtasa(string $lekerdezes)
+    function egyLekeresVegrehajtasa($lekerdezes)
     {
-        $eredmenyek = $this->lekeresVegrehajtasa($lekerdezes);
-        $this->bontas();
-        return $eredmenyek;
-    }
-
-    /**
-     * @param string $lekerdezes
-     * @return bool|mysqli_result
-     */
-    function lekeresVegrehajtasa(string $lekerdezes)
-    {
-        return $this->getKapcsolat()->query($lekerdezes);
+        $res = $this->getKapcsolat()->query($lekerdezes);
+        if($this->kapcsolat->errno) print $this->kapcsolat->error;
+        return $res;
     }
 }

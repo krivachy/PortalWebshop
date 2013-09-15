@@ -2,34 +2,95 @@
     width: 1000px;
     height: auto;
     margin: 0 auto;
-
+    border-bottom: #31C3E7 double medium;
+    border-left: #31C3E7 double thin;
+    border-right: #31C3E7 double thin;
+}
+h2 {
+    color: #8CC739;
+    padding-left: 10px;
+}
+#kosar, #belepes, #webshop, #regisztracio {
+    padding: 10px;
+}
+h1 a {
+    color: #085DAD;
+    text-decoration: none;
 }
 
 #header {
     width: 1000px;
-    height: 150px;
+    height: 100px;
+    color: #085DAD;
+    padding: 10px;
+    text-align: center;
 }
 
 #kosar {
     float: left;
-    width: 200px;
-    height: 100%;
+    width: 180px;
+    min-height: 100%;
+}
+#kosar img {
+    max-width: 180px;
 }
 
 #webshop {
     float: left;
-    width: 600px;
-    height: 100%;
+    width: 580px;
 }
 
-#belepes {
+#belepes, #regisztracio {
+    float: left;
+    clear: left;
+    width: 180px;
+}
+#bal-oldal{
     float: left;
     width: 200px;
-    height: 100%;
+    min-height: 100%;
 }
 
 #footer {
+    border-top: #31C3E7 dashed 2px;
     clear: both;
     width: 1000px;
-    height: 150px;
+    height: 50px;
+    text-align: center;
+    padding-top: 20px;
+    text-decoration-color: #ADB6B5;
+    text-decoration-style: solid;
+    text-spacing: ideograph-alpha;
+}
+#action {
+    padding: 50px;
+    color: #8CC739;
+    font-weight: bold;
+    text-decoration-style: solid;
+}
+
+#termek {
+    border: #999999 dotted medium;
+    width: 240px;
+    height: 200px;
+    float: left;
+    padding: 5px 5px 5px 20px;
+    margin: 5px;
+}
+#termek h3 {
+    color: #21BEDE;
+
+
+}
+#termek p {
+
+}
+#termek span {
+    font-weight: bold;
+}
+
+.gomb {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
