@@ -1,4 +1,12 @@
 <?php
+/**
+ * Author: K. Ákos
+ * Date: 2013.09.15.
+ * Time: 19:52
+ *
+ * Egy action amelyik lekezli a Belépés funckió POST metódusát.
+ */
+/** @noinspection PhpIncludeInspection */
 include_once "app/App.php";
 
 $siker = 'Location: index.php';

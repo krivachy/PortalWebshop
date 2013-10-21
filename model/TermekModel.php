@@ -7,9 +7,25 @@
 
 class TermekModel {
 
+    /**
+     * Azonosítója
+     * @var int
+     */
     public $id;
+    /**
+     * A termék neve
+     * @var string
+     */
     public $nev;
+    /**
+     * Leírása
+     * @var string
+     */
     public $leiras;
+    /**
+     * A termék ára, forintban.
+     * @var int
+     */
     public $ar;
 
     function __construct($id, $nev, $leiras, $ar)

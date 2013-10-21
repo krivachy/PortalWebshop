@@ -5,6 +5,10 @@
  * Time: 11:50
  */
 
+/**
+ * Class DbKapcsolat
+ * Becsomagolja a mysqli függvényeket.
+ */
 class DbKapcsolat
 {
     /**

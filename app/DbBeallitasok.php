@@ -6,6 +6,11 @@
  */
 include_once "IDbBeallitasok.php";
 
+/**
+ * Class DbBeallitasok
+ * Implementálja az IDbBeallitasok interfészt.
+ * Megadja a szerver kapcsolódási információit.
+ */
 class DbBeallitasok implements IDbBeallitasok
 {
 

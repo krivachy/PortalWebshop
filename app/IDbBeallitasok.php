@@ -5,6 +5,10 @@
  * Time: 12:29
  */
 
+/**
+ * Class IDbBeallitasok
+ * Több osztály implementálhatja a különböző adatbázisok elérése érdekében.
+ */
 interface IDbBeallitasok
 {
 
