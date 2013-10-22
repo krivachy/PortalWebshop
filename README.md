@@ -6,7 +6,7 @@ Corvinus 2SZ31NDK02B tárgyra készült.
 Egy egyszerű webshop, amely egy összetett PHP alkalmazás modellezést kivánja bemutatni.
 
 ## English description
-Create a simple PHP webshop, to demo a multi layered PHP application. Please don't actually use this, because it has a couple of major holes, e.g.: storing passwords in cleartext, vulnerable to MYSQL injection, etc.
+A simple PHP webshop, to demo a multi layered PHP application. Please don't actually use this, because it has a couple of major holes, e.g.: storing passwords in cleartext, vulnerable to MYSQL injection, etc.
 
 ## A program elinditása
 1. Kell hozzá: PHP 5.4+ és MYSQL szerver.
