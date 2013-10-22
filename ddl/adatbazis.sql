@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS portaltech;
+
+CREATE DATABASE portaltech CHARACTER SET 'utf8';
