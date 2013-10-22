@@ -32,7 +32,7 @@ class FelhasznaloDao
      * @return FelhasznaloModel
      */
     function felhasznaloFelvetele($f_nev, $jelszo, $nev, $admin){
-        $insert = "INSERT INTO felhasznalo(f_nev, jelszo, nev, admin) values ('".$f_nev."', '".$jelszo."', '".$nev."', ".$admin.")";
+        $insert = "INSERT INTO FELHASZNALO(f_nev, jelszo, nev, admin) values ('".$f_nev."', '".$jelszo."', '".$nev."', ".$admin.")";
         $eredmeny = $this->kapcsolat->egyLekeresVegrehajtasa($insert);
         if(!$eredmeny) die('Nem sikerület felvenni a felhasználót!');
         else return $this->felhasznaloBeleptetese($f_nev, $jelszo);
@@ -44,7 +44,7 @@ class FelhasznaloDao
      * @return FelhasznaloModel
      */
     function felhasznaloBeleptetese($f_nev, $jelszo){
-        $q = "SELECT f_id, f_nev, nev, admin FROM felhasznalo f WHERE f.f_nev = '".$f_nev."' AND f.jelszo = '".$jelszo."'";
+        $q = "SELECT f_id, f_nev, nev, admin FROM FELHASZNALO f WHERE f.f_nev = '".$f_nev."' AND f.jelszo = '".$jelszo."'";
         $eredmeny = $this->kapcsolat->egyLekeresVegrehajtasa($q);
         if($eredmeny != false && $eredmeny->num_rows == 1){
             $sor = $eredmeny->fetch_assoc();
@@ -59,7 +59,7 @@ class FelhasznaloDao
      * @return bool
      */
     function felhasznaloEllenorzese($f_nev){
-        $q = "SELECT f.f_id FROM felhasznalo f WHERE f.f_nev = ".$f_nev;
+        $q = "SELECT f.f_id FROM FELHASZNALO f WHERE f.f_nev = ".$f_nev;
         $eredmeny = $this->kapcsolat->egyLekeresVegrehajtasa($q);
         if($eredmeny == false){
             return true;

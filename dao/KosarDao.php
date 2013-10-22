@@ -75,7 +75,7 @@ class KosarDao
      * @return bool
      */
     public function torles($termek) {
-        $delete = "DELETE FROM kosar WHERE f_id = " . $this->felhasznalo . " AND t_id = " . $termek;
+        $delete = "DELETE FROM KOSAR WHERE f_id = " . $this->felhasznalo . " AND t_id = " . $termek;
         $this->vegrehajtas($delete);
         return true;
     }

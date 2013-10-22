@@ -21,7 +21,7 @@ class TermekDao {
      * @return TermekModel[]
      */
     public function termekek(){
-        $q = "SELECT * FROM termek t order by t.nev";
+        $q = "SELECT * FROM TERMEK t order by t.nev";
         $eredmeny = $this->kapcsolat->egyLekeresVegrehajtasa($q);
         if($eredmeny != null && $eredmeny != false) {
             $result = array();
