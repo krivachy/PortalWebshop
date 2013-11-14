@@ -59,9 +59,9 @@ class FelhasznaloDao
      * @return bool
      */
     function felhasznaloEllenorzese($f_nev){
-        $q = "SELECT f.f_id FROM FELHASZNALO f WHERE f.f_nev = ".$f_nev;
+        $q = "SELECT f.f_id FROM FELHASZNALO f WHERE f.f_nev = '".$f_nev."'";
         $eredmeny = $this->kapcsolat->egyLekeresVegrehajtasa($q);
-        if($eredmeny == false){
+        if($eredmeny->num_rows == 0){
             return true;
         } else {
             return false;
